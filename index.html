@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Jeremiah Portfolio</title>
+    <style>
+        /* Ensure each section is visible */
+        section {
+            min-height: 100vh;
+            padding: 50px 20px;
+            color: white;
+        }
+
+        #about, #skills, #contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #about {
+            background-color: #1a1a2e;
+        }
+
+        #skills {
+            background-color: #16213e;
+        }
+
+        #contact {
+            background-color: #0f3460;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #071e7b;
+        }
+
+        p, ul {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding: 5px;
+            background: #071e7b;
+            color: white;
+            border-radius: 5px;
+            width: fit-content;
+            text-align: center;
+        }
+
+        a {
+            color: #1c77c3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Jeremiah <span>Reuban N</span>
+            </div>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="njr.jpeg" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Jeremiah</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                    I'm a <span class="typewriter-text"></span><label for="">|</label>
+                </div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                    I'm an enthusiastic and emerging full stack web developer. I'm currently pursuing my Bachelors of Engineering in Electrical and Electronics domain.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/REUBAN7104" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jeremiah-reuban-n-32a747258/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    <a href="res.pdf" download>
+                        <button>Download My Resume</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>I'm a passionate developer who loves creating web applications. My journey in tech has been fueled by curiosity and determination.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1>My Skills</h1>
+        <p>Here are some of the skills I excel in:</p>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>MySql</li>
+            <li>Data Structures</li>
+            <li>Team working</li>
+            <li>strong Communication</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>You can reach me via email: <a href="mailto:jeremiahruban7104@gmail.com">jeremiahruban7104@gmail.com</a></p>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
