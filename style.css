@@ -174,7 +174,7 @@ section{
 }
 .content button{
     width: 50%;
-    height: 6vh;
+    height: 9vh;
     margin: 30px;
     background-color: #077b32;
     color: white;
@@ -182,7 +182,7 @@ section{
     outline: none;
     font-size: 120%;
     font-weight: 700;
-    border-radius: 5px;
+    border-radius: 15px;
     transition: 0.2s linear;
 }
 .content button:hover{
@@ -226,15 +226,76 @@ section{
     }
 }
 @media (max-width:440px){
-    .main-container .image{
-        width: 50%;
-        height: 60%;
-        margin-bottom: 0px;
+    .main-container .image {
+        width: 300px; /* Set a fixed size for smaller screens */
+        height: 300px;
+        border-radius: 10%;
+        overflow: hidden;
+        box-shadow: 0 0 50px #077b32;
+        margin-bottom: 20px; /* For spacing */
     }
+    
     .main-container .content{
         width: 80%;
     }
     .main-container button{
         margin-top: 15px;
+    }
+}
+/* Hamburger Icon */
+.hamburg {
+    display: none; /* Initially hidden */
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    font-size: 2.5rem;
+    z-index: 101; /* Ensure it's above other content */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.dropdown.active {
+    transform: translateY(0); /* Show menu */
+    opacity: 1;
+}
+
+.dropdown a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dropdown a:hover {
+    color: #077b32;
+}
+
+/* Show Hamburger Icon on Smaller Screens */
+@media (max-width: 884px) {
+    .hamburg {
+        display: block; /* Show hamburger icon */
+    }
+
+    .nav-container .links {
+        display: none; /* Hide default links */
     }
 }
