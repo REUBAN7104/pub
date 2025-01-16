@@ -33,12 +33,14 @@ function eraseText(){
 window.onload = typeWriter;
 
 // Hamburger Menu
-function hamburg() {
-    const navbar = document.querySelector(".dropdown");
-    navbar.classList.add("active"); // Show the dropdown menu by adding the 'active' class
-}
+const hamburg = document.querySelector(".hamburg");
+const cancel = document.querySelector(".cancel");
+const navbar = document.querySelector(".dropdown");
 
-function cancel() {
-    const navbar = document.querySelector(".dropdown");
-    navbar.classList.remove("active"); // Hide the dropdown menu by removing the 'active' class
-}
+hamburg.addEventListener("click", function() {
+    navbar.classList.add("active"); // Show dropdown menu
+});
+
+cancel.addEventListener("click", function() {
+    navbar.classList.remove("active"); // Hide dropdown menu
+});
